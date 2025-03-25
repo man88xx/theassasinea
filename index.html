@@ -1,15 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=AW-16951725493"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'AW-16951725493');
-</script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Register Your FBS Account & Start Trading</title>
@@ -20,16 +11,18 @@
             font-family: Arial, sans-serif;
             text-align: center;
             background: linear-gradient(to right, #2c3e50, #4ca1af);
-            padding: 20px;
+            margin: 0;
+            padding: 0;
             color: white;
         }
         .container {
-            max-width: 600px;
+            width: 90%;
+            max-width: 800px;
             background: white;
             padding: 30px;
             border-radius: 15px;
             box-shadow: 0px 0px 15px rgba(0,0,0,0.2);
-            margin: auto;
+            margin: 20px auto;
             text-align: center;
             color: #333;
         }
@@ -65,42 +58,46 @@
             font-size: 16px;
             margin: 8px 0;
         }
-        .ea-section {
-            margin-top: 30px;
+        .ea-section, .performance-section {
+            width: 90%;
+            max-width: 800px;
+            margin: 20px auto;
             padding: 20px;
             background: #f8f9fa;
             border-radius: 10px;
-            text-align: left;
-        }
-        .ea-section h2 {
-            color: #28a745;
             text-align: center;
         }
-        .ea-section ul {
-            padding-left: 20px;
+        .ea-section h2, .performance-section h2 {
+            color: #28a745;
         }
         .ea-logo {
             max-width: 150px;
             display: block;
             margin: 10px auto;
         }
-        .performance-section {
-            margin-top: 30px;
-            padding: 20px;
-            background: #ffffff;
-            border-radius: 10px;
-            text-align: center;
-        }
-        .performance-section h2 {
-            color: #28a745;
-        }
         .performance-img {
-            max-width: 100%;
+            width: 100%;
             border-radius: 10px;
             box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
             margin-top: 15px;
         }
     </style>
+    <script>
+        function gtag_report_conversion(url) {
+          var callback = function () {
+            if (typeof(url) != 'undefined') {
+              window.location = url;
+            }
+          };
+          gtag('event', 'conversion', {
+              'send_to': 'AW-16951725493/m2yYCMmhoa8aELWbm5M_',
+              'value': 1.0,
+              'currency': 'MYR',
+              'event_callback': callback
+          });
+          return false;
+        }
+    </script>
 </head>
 <body>
     <div class="container">
@@ -112,10 +109,10 @@
             <li>✅ Free demo account for practice</li>
             <li>✅ 24/7 customer support</li>
         </ul>
-        <a href="https://fbs.partners?ibl=86479&ibp=560810" class="cta-button">📈 Register Now & Claim Your Bonus!</a>
+        <a href="https://fbs.partners?ibl=86479&ibp=560810" class="cta-button" onclick="return gtag_report_conversion('https://fbs.partners?ibl=86479&ibp=560810');">📈 Register Now & Claim Your Bonus!</a>
     </div>
 
-    <div class="container ea-section">
+    <div class="ea-section">
         <h2>🔥 The Assassin EA V1 – Exclusive Trading Robot</h2>
         <img src="the_assassin_logo.jpg" alt="The Assassin EA Logo" class="ea-logo">
         <ul>
@@ -134,7 +131,7 @@
         <p><strong>Investor password available only on Saturdays & Sundays</strong> to prevent unauthorized copy trading. Enjoy your weekend!</p>
     </div>
 
-    <div class="container performance-section">
+    <div class="performance-section">
         <h2>📊 The Assassin EA Performance</h2>
         <img src="Graf Perfomance.png" alt="EA Performance Chart" class="performance-img">
         <img src="Profit Gains.png" alt="Monthly Profit Analytics" class="performance-img">
